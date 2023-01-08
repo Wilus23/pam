@@ -21,17 +21,32 @@ export default function App() {
     <View>
       <StatusBar />
       <ScrollView>
-        {/* <Calc /> */}
-        <Layout1 />
-        {/* <Layout2 /> */}
-        {/* <Form /> */}
+        <View style={styles.app}>
+          <Text style={styles.title}>Zadanie 1: Layout1</Text>
+          <Layout1 />
+          <View style={styles.layout1}>
+            <Text style={styles.title}>Zadanie 1: Layout2</Text>
+            <Layout2 />
+          </View>
+          <Calc />
+          <Form />
+        </View>
       </ScrollView>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  app: {
+    display: "flex",
+    flexDirection: "column",
+  },
   layout1: {
-    margin: 100,
+    margin: 180,
+  },
+  title: {
+    fontWeight: 700,
+    fontSize: 30,
+    textAlign: "center",
   },
 });

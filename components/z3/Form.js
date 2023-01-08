@@ -138,136 +138,136 @@ export default function Form() {
   };
 
   // *! Poniżej widoki:
-  // return (
-  // <View>
-  //   {/* Intro */}
-  //   <View style={styles.welcomeContainer}>
-  //     <Text style={styles.welcomeText}>Witaj w formularezu rejestracji</Text>
-  //   </View>
-  //   {/* Imię */}
-  //   <View style={styles.inputContainer}>
-  //     <TextInput
-  //       placeholder="Wpisz swoje imię"
-  //       onChangeText={(text) => setName(text)}
-  //       value={name}
-  //       style={styles.inpucik}
-  //     />
-  //   </View>
-  //   {/* Naziwsko */}
-  //   <View style={styles.inputContainer}>
-  //     <TextInput
-  //       placeholder="Wpisz swoje nazwisko"
-  //       onChangeText={(text) => setSubname(text)}
-  //       value={subname}
-  //       style={styles.inpucik}
-  //     />
-  //   </View>
-  //   {/* Wiek */}
-  //   <View style={styles.inputContainer}>
-  //     <TextInput
-  //       placeholder="Wpisz swój wiek"
-  //       onChangeText={(text) => setAge(text)}
-  //       value={age}
-  //       style={styles.inpucik}
-  //     />
-  //   </View>
-  //   {/* Adres */}
-  //   <View style={styles.inputContainer}>
-  //     <TextInput
-  //       placeholder="Miejscowość"
-  //       onChangeText={(text) => {
-  //         setAdress({ ...adress, city: text });
-  //       }}
-  //       value={adress.city}
-  //       style={styles.inpucik}
-  //     />
-  //   </View>
-  //   <View style={styles.inputContainer}>
-  //     <TextInput
-  //       placeholder="Ulica"
-  //       onChangeText={(text) => {
-  //         setAdress({ ...adress, street: text });
-  //       }}
-  //       value={adress.street}
-  //       style={styles.inpucik}
-  //     />
-  //   </View>
-  //   <View style={styles.inputContainer}>
-  //     <TextInput
-  //       placeholder="Mieszkanie"
-  //       onChangeText={(text) => {
-  //         setAdress({ ...adress, apartment: text });
-  //       }}
-  //       value={adress.apartment}
-  //       style={styles.inpucik}
-  //     />
-  //   </View>
-  //   {/* Wybór daty */}
-  //   <DatePicker
-  //     mode="calendar"
-  //     options={{
-  //       headerAnimationDistance: 8,
-  //     }}
-  //     onSelectedChange={(date) => setSelectedDate(date)}
-  //   />
+  return (
+    <View>
+      {/* Intro */}
+      <View style={styles.welcomeContainer}>
+        <Text style={styles.welcomeText}>Witaj w formularezu rejestracji</Text>
+      </View>
+      {/* Imię */}
+      <View style={styles.inputContainer}>
+        <TextInput
+          placeholder="Wpisz swoje imię"
+          onChangeText={(text) => setName(text)}
+          value={name}
+          style={styles.inpucik}
+        />
+      </View>
+      {/* Naziwsko */}
+      <View style={styles.inputContainer}>
+        <TextInput
+          placeholder="Wpisz swoje nazwisko"
+          onChangeText={(text) => setSubname(text)}
+          value={subname}
+          style={styles.inpucik}
+        />
+      </View>
+      {/* Wiek */}
+      <View style={styles.inputContainer}>
+        <TextInput
+          placeholder="Wpisz swój wiek"
+          onChangeText={(text) => setAge(text)}
+          value={age}
+          style={styles.inpucik}
+        />
+      </View>
+      {/* Adres */}
+      <View style={styles.inputContainer}>
+        <TextInput
+          placeholder="Miejscowość"
+          onChangeText={(text) => {
+            setAdress({ ...adress, city: text });
+          }}
+          value={adress.city}
+          style={styles.inpucik}
+        />
+      </View>
+      <View style={styles.inputContainer}>
+        <TextInput
+          placeholder="Ulica"
+          onChangeText={(text) => {
+            setAdress({ ...adress, street: text });
+          }}
+          value={adress.street}
+          style={styles.inpucik}
+        />
+      </View>
+      <View style={styles.inputContainer}>
+        <TextInput
+          placeholder="Mieszkanie"
+          onChangeText={(text) => {
+            setAdress({ ...adress, apartment: text });
+          }}
+          value={adress.apartment}
+          style={styles.inpucik}
+        />
+      </View>
+      {/* Wybór daty */}
+      <DatePicker
+        mode="calendar"
+        options={{
+          headerAnimationDistance: 8,
+        }}
+        onSelectedChange={(date) => setSelectedDate(date)}
+      />
 
-  //   {/* Button - wysyłanie danych */}
+      {/* Button - wysyłanie danych */}
 
-  //   {/* Wybór płci */}
-  //   <ButtonGroup
-  //     buttons={["Kobieta", "Mężczyzna"]}
-  //     selectedIndex={gender}
-  //     onPress={(value) => {
-  //       setGender(value);
-  //       if (gender < 1) {
-  //         setStatusGender("Mężczyzna");
-  //       } else {
-  //         setStatusGender("Kobieta");
-  //       }
-  //     }}
-  //     containerStyle={{ marginBottom: 20 }}
-  //   />
-  //   <CheckBox
-  //     center
-  //     title="Piłka nożna"
-  //     checked={check1}
-  //     onPress={handleSports1}
-  //     checkedIcon="dot-circle-o"
-  //     uncheckedIcon="circle-o"
-  //   />
-  //   <CheckBox
-  //     center
-  //     title="Siatkówka"
-  //     checked={check2}
-  //     onPress={handleSports2}
-  //     checkedIcon="dot-circle-o"
-  //     uncheckedIcon="circle-o"
-  //   />
-  //   <CheckBox
-  //     center
-  //     title="Koszykówka"
-  //     checked={check3}
-  //     onPress={handleSports3}
-  //     checkedIcon="dot-circle-o"
-  //     uncheckedIcon="circle-o"
-  //   />
-  //   <TouchableOpacity onPress={handleViewingData} style={styles.confirmBtn}>
-  //     <Text style={styles.confirmBtnText}>Wyślij</Text>
-  //   </TouchableOpacity>
-  //   {/* WYŚWIETLANIE DANYCH */}
-  //   <Text>Imię: {userData.name}</Text>
-  //   <Text>Nazwisko: {userData.subname}</Text>
-  //   <Text>Wiek: {userData.age}</Text>
-  //   <Text>Miasto: {userData.details.city}</Text>
-  //   <Text>Warszawa: {userData.details.street}</Text>
-  //   <Text>Mieszkanie: {userData.details.apartment}</Text>
-  //   <Text>Data urodzenia: {userData.date}</Text>
-  //   <Text>Płeć: {userData.gender}</Text>
-  //   <Text>Sporty: {userData.sports}</Text>
+      {/* Wybór płci */}
+      <ButtonGroup
+        buttons={["Kobieta", "Mężczyzna"]}
+        selectedIndex={gender}
+        onPress={(value) => {
+          setGender(value);
+          if (gender < 1) {
+            setStatusGender("Mężczyzna");
+          } else {
+            setStatusGender("Kobieta");
+          }
+        }}
+        containerStyle={{ marginBottom: 20 }}
+      />
+      <CheckBox
+        center
+        title="Piłka nożna"
+        checked={check1}
+        onPress={handleSports1}
+        checkedIcon="dot-circle-o"
+        uncheckedIcon="circle-o"
+      />
+      <CheckBox
+        center
+        title="Siatkówka"
+        checked={check2}
+        onPress={handleSports2}
+        checkedIcon="dot-circle-o"
+        uncheckedIcon="circle-o"
+      />
+      <CheckBox
+        center
+        title="Koszykówka"
+        checked={check3}
+        onPress={handleSports3}
+        checkedIcon="dot-circle-o"
+        uncheckedIcon="circle-o"
+      />
+      <TouchableOpacity onPress={handleViewingData} style={styles.confirmBtn}>
+        <Text style={styles.confirmBtnText}>Wyślij</Text>
+      </TouchableOpacity>
+      {/* WYŚWIETLANIE DANYCH */}
+      <Text>Imię: {userData.name}</Text>
+      <Text>Nazwisko: {userData.subname}</Text>
+      <Text>Wiek: {userData.age}</Text>
+      <Text>Miasto: {userData.details.city}</Text>
+      <Text>Warszawa: {userData.details.street}</Text>
+      <Text>Mieszkanie: {userData.details.apartment}</Text>
+      <Text>Data urodzenia: {userData.date}</Text>
+      <Text>Płeć: {userData.gender}</Text>
+      <Text>Sporty: {userData.sports}</Text>
 
-  //   {/* <Text>Zainteresowania: {check1}</Text> */}
-  // </View>
-  // );
+      {/* <Text>Zainteresowania: {check1}</Text> */}
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
