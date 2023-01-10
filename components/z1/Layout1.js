@@ -54,15 +54,11 @@ const Layout1 = () => {
         </View>
       </View>
     </View>
-
-
-
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    height: "100%",
     flexDirection: "column",
   },
   line: {

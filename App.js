@@ -12,9 +12,10 @@ import Layout1 from "./components/z1/Layout1";
 import Layout2 from "./components/z1/Layout2";
 //zadanie 2
 import Calc from "./components/z2/Calc";
-// zadanie3
+// zadanie 3
 import Form from "./components/z3/Form";
-// import Test from "./components/zad3/Test";
+// zadanie 4
+import Zad4 from "./components/z4/Zad4";
 
 export default function App() {
   return (
@@ -22,14 +23,18 @@ export default function App() {
       <StatusBar />
       <ScrollView>
         <View style={styles.app}>
-          <Text style={styles.title}>Zadanie 1: Layout1</Text>
-          <Layout1 />
+          <View style={styles.layout1}>
+            <Text style={styles.title}>Zadanie 1: Layout1</Text>
+            <Layout1 />
+          </View>
           <View style={styles.layout1}>
             <Text style={styles.title}>Zadanie 1: Layout2</Text>
             <Layout2 />
           </View>
           <Calc />
           <Form />
+          <Text style={styles.title}>Zadanie 4:</Text>
+          <Zad4 />
         </View>
       </ScrollView>
     </View>
@@ -42,10 +47,9 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   layout1: {
-    margin: 180,
+    marginVertical: 180,
   },
   title: {
-    fontWeight: 700,
     fontSize: 30,
     textAlign: "center",
   },
