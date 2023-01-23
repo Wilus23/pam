@@ -12,6 +12,8 @@ import {
 
 import DatePicker from "react-native-modern-datepicker";
 import { CheckBox, ButtonGroup } from "@rneui/themed";
+
+import AsyncStorage from "@react-native-async-storage/async-storage";
 // import { Button } from "@rneui/base";
 // Checkbox jest zaimportowany z https://reactnativeelements.com/
 
@@ -135,6 +137,36 @@ export default function Form() {
     //     basketball: "",
     //   });
     // }
+  };
+  // !zad4
+  const [text, setText] = useState("789");
+  const [fileText, setFileText] = useState("");
+
+  const writeFile = async () => {
+    const userDataStringify = JSON.stringify(userData);
+    console.log(userDataStringify);
+    setText(userDataStringify);
+    try {
+      await AsyncStorage.setItem("myfile", userDataStringify);
+    } catch (error) {
+      console.log("Error writing to file: ", error);
+    }
+  };
+
+  const readFile = async () => {
+    try {
+      const fileData = await AsyncStorage.getItem("myfile");
+      setFileText(fileData);
+    } catch (error) {
+      console.log("Error reading file: ", error);
+    }
+  };
+  const cleanFile = async () => {
+    try {
+      setFileText("");
+    } catch (err) {
+      console.log("Error: ", err);
+    }
   };
 
   // *! Poniżej widoki:
@@ -266,6 +298,13 @@ export default function Form() {
       <Text>Sporty: {userData.sports}</Text>
 
       {/* <Text>Zainteresowania: {check1}</Text> */}
+
+      <View>
+        <Button title="Zapisz do pliku" onPress={writeFile} />
+        <Button title="Odczytaj z pliku" onPress={readFile} />
+        <Button title="Wyczyść plik" onPress={cleanFile} />
+        <Text>{fileText}</Text>
+      </View>
     </View>
   );
 }

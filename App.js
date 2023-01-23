@@ -16,6 +16,7 @@ import Calc from "./components/z2/Calc";
 import Form from "./components/z3/Form";
 // zadanie 4
 import Zad4 from "./components/z4/Zad4";
+import Zad5 from "./components/z5/Zad5";
 
 export default function App() {
   return (
@@ -34,7 +35,9 @@ export default function App() {
           <Calc />
           <Form />
           <Text style={styles.title}>Zadanie 4:</Text>
-          <Zad4 />
+          {/* <Zad4 /> */}
+          <Text style={styles.title}>Zadanie 5:</Text>
+          <Zad5 />
         </View>
       </ScrollView>
     </View>

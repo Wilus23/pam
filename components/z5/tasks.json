@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Make a todo list",
+        "date":
+        {
+        "time": "10:00",
+        "detail": "12.01.2023"
+        },
+        "description": "todo list"
+    },
+    {
+        "id": 2,
+        "name": "Take a nap",
+        "date":
+        {
+         "time": "11:00",
+         "detail": "11.01.2023"
+        },
+         "description": "Nap"
+    },
+    {
+        "id": 3,
+        "name": "Drink tea",
+        "date":
+        {
+         "time": "12:00",
+         "detail": "14.01.2023"
+        },
+         "description": "Tea"
+    }
+]
