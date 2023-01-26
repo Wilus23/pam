@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Make a todo list",
+        "name": "Make a todo list 📝",
         "date":
         {
         "time": "10:00",
@@ -11,7 +11,7 @@
     },
     {
         "id": 2,
-        "name": "Take a nap",
+        "name": "Take a nap 😴",
         "date":
         {
          "time": "11:00",
@@ -21,12 +21,142 @@
     },
     {
         "id": 3,
-        "name": "Drink tea",
+        "name": "Drink tea ☕",
         "date":
         {
          "time": "12:00",
          "detail": "14.01.2023"
         },
          "description": "Tea"
+    },
+    {
+        "id": 4,
+        "name": "Buy fruit 🍇",
+        "date":
+        {
+         "time": "08:00",
+         "detail": "11.01.2023"
+        },
+         "description": "Fruit"
+    },
+    {
+        "id": 5,
+        "name": "Make a todo list 📝",
+        "date":
+        {
+        "time": "10:00",
+        "detail": "12.01.2023"
+        },
+        "description": "todo list"
+    },
+    {
+        "id": 6,
+        "name": "Take a nap 😴",
+        "date":
+        {
+         "time": "11:00",
+         "detail": "11.01.2023"
+        },
+         "description": "Nap"
+    },
+    {
+        "id": 7,
+        "name": "Drink tea ☕",
+        "date":
+        {
+         "time": "12:00",
+         "detail": "14.01.2023"
+        },
+         "description": "Tea"
+    },
+    {
+        "id": 8,
+        "name": "Buy fruit 🍇",
+        "date":
+        {
+         "time": "08:00",
+         "detail": "11.01.2023"
+        },
+         "description": "Fruit"
+    },
+    {
+        "id": 9,
+        "name": "Make a todo list 📝",
+        "date":
+        {
+        "time": "10:00",
+        "detail": "12.01.2023"
+        },
+        "description": "todo list"
+    },
+    {
+        "id": 10,
+        "name": "Take a nap 😴",
+        "date":
+        {
+         "time": "11:00",
+         "detail": "11.01.2023"
+        },
+         "description": "Nap"
+    },
+    {
+        "id": 11,
+        "name": "Drink tea ☕",
+        "date":
+        {
+         "time": "12:00",
+         "detail": "14.01.2023"
+        },
+         "description": "Tea"
+    },
+    {
+        "id": 12,
+        "name": "Buy fruit 🍇",
+        "date":
+        {
+         "time": "08:00",
+         "detail": "11.01.2023"
+        },
+         "description": "Fruit"
+    },
+    {
+        "id": 13,
+        "name": "Make a todo list 📝",
+        "date":
+        {
+        "time": "10:00",
+        "detail": "12.01.2023"
+        },
+        "description": "todo list"
+    },
+    {
+        "id": 14,
+        "name": "Take a nap 😴",
+        "date":
+        {
+         "time": "11:00",
+         "detail": "11.01.2023"
+        },
+         "description": "Nap"
+    },
+    {
+        "id": 15,
+        "name": "Drink tea ☕",
+        "date":
+        {
+         "time": "12:00",
+         "detail": "14.01.2023"
+        },
+         "description": "Tea"
+    },
+    {
+        "id": 16,
+        "name": "Buy fruit 🍇",
+        "date":
+        {
+         "time": "08:00",
+         "detail": "11.01.2023"
+        },
+         "description": "Fruit"
     }
 ]

@@ -6,6 +6,8 @@ import {
   StatusBar,
   Platform,
   ScrollView,
+  Alert,
+  Button,
 } from "react-native";
 //zadanie 1
 import Layout1 from "./components/z1/Layout1";
@@ -17,10 +19,11 @@ import Form from "./components/z3/Form";
 // zadanie 4
 import Zad4 from "./components/z4/Zad4";
 import Zad5 from "./components/z5/Zad5";
+import Zad6 from "./components/z6/Zad6";
 
 export default function App() {
   return (
-    <View>
+    <View style={styles.body}>
       <StatusBar />
       <ScrollView>
         <View style={styles.app}>
@@ -34,10 +37,12 @@ export default function App() {
           </View>
           <Calc />
           <Form />
-          <Text style={styles.title}>Zadanie 4:</Text>
+          {/* <Text style={styles.title}>Zadanie 4:</Text> */}
           {/* <Zad4 /> */}
-          <Text style={styles.title}>Zadanie 5:</Text>
+          <Text style={styles.title}>Zadanie 4 i 5:</Text>
           <Zad5 />
+          <Text style={styles.title}>Zadanie 6:</Text>
+          <Zad6 />
         </View>
       </ScrollView>
     </View>
@@ -45,6 +50,10 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  body: {
+    marginLeft: 15,
+    marginRight: 15,
+  },
   app: {
     display: "flex",
     flexDirection: "column",

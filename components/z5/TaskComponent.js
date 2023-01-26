@@ -1,37 +1,75 @@
-import { View, Text, Button, FlatList, Image, StyleSheet } from "react-native";
-import React from "react";
+import {
+  View,
+  Text,
+  Button,
+  FlatList,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  Alert,
+} from "react-native";
+import React, { useState } from "react";
 
-export default function TaskComponent({ title, time, date }) {
+export default function TaskComponent({ title, time, date, description }) {
+  const [done, setDone] = useState(false);
+
+  const handleDone = () => {
+    setDone(!done);
+    console.log(done);
+  };
+
+  const createThreeButtonAlert = () => Alert.alert("Opis zadania", description);
+
   return (
-    <View style={styles.taskContainer}>
-      <View style={styles.innerTask}>
-        <Text>{title}</Text>
-        <View>
-          <Text>{time}</Text>
-          <Text>{date}</Text>
+    <TouchableOpacity onPress={createThreeButtonAlert}>
+      <View style={styles.taskContainer}>
+        <View style={styles.innerTask}>
+          <Text style={styles.item}>{title}</Text>
+          <View style={styles.date}>
+            <Text>{time}</Text>
+            <Text>{date}</Text>
+          </View>
+          <TouchableOpacity onPress={handleDone}>
+            <Image
+              source={done ? require("./accept.png") : require("./cross.png")}
+              style={{ width: 28, height: 28 }}
+              resizeMode={"cover"}
+              onPress={handleDone}
+            />
+          </TouchableOpacity>
         </View>
-        <Image
-          source={require("./accept.png")}
-          style={{ width: 28, height: 28 }}
-          resizeMode={"cover"}
-        />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   taskContainer: {
-    width: "80%",
+    width: "100%",
     display: "flex",
-    flexDirection: "row",
-    alignContent: "space-between",
+    alignItems: "center",
+    marginTop: 10,
   },
   innerTask: {
     width: "100%",
     display: "flex",
     flexDirection: "row",
-    alignItems: "space-around",
+    justifyContent: "space-around",
+    alignItems: "center",
+    backgroundColor: "green",
+    marginBottom: 10,
+    paddingTop: 4,
+    paddingBottom: 4,
+  },
+  item: {
+    flexWrap: "wrap",
+    width: "20%",
+  },
+  date: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignContent: "center",
   },
   img: {
     width: 400,
