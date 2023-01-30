@@ -137,10 +137,7 @@ export default function Zad7() {
       />
 
       <TouchableOpacity onPress={saveItem}>
-        <Text style={styles.btnText}>Save</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={saveAPIItem}>
-        <Text style={styles.btnText}>Save random person to API</Text>
+        <Text style={styles.btnText}>Zapisz swoje dane</Text>
       </TouchableOpacity>
       <FlatList
         style={{ marginLeft: "5%" }}
@@ -158,6 +155,9 @@ export default function Zad7() {
           </View>
         )}
       />
+      <TouchableOpacity onPress={saveAPIItem}>
+        <Text style={styles.btnText}>Zapisz losową osobę z API</Text>
+      </TouchableOpacity>
 
       <TextInput
         placeholder="Filter by age"
@@ -169,13 +169,15 @@ export default function Zad7() {
           handleSearch(ageFilter);
         }}
       />
+      <Text style={styles.filter}>Wyniki filtru:</Text>
       <FlatList
         data={filterUsers}
+        style={styles.filter}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
-          <View>
-            <Text>{item.subname}</Text>
-            <Text>{item.age}</Text>
+          <View style={styles.filterItems}>
+            <Text style={styles.filterItem}>{item.subname}</Text>
+            <Text style={styles.filterItem}>{item.age}</Text>
           </View>
         )}
       />
@@ -199,9 +201,14 @@ const styles = StyleSheet.create({
     width: 200,
   },
   btnText: {
-    color: "darkslateblue",
-    fontSize: 20,
+    color: "white",
+    fontSize: 15,
     textAlign: "center",
+    backgroundColor: "blue",
+    padding: 20,
+    borderRadius: 40,
+    marginTop: 10,
+    marginBottom: 10,
   },
   list: {
     flexDirection: "row",
@@ -210,5 +217,18 @@ const styles = StyleSheet.create({
   },
   delete: {
     color: "crimson",
+  },
+  filter: {
+    fontSize: 20,
+    marginBottom: 10,
+  },
+  filterItems: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  filterItem: {
+    marginLeft: 20,
+    marginRight: 20,
   },
 });

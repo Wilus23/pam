@@ -94,7 +94,8 @@ const styles = StyleSheet.create({
   result: {
     textAlign: "center",
     fontSize: 40,
-    marginTop: 100,
+    marginTop: 30,
+    marginBottom: 50,
   },
 });
 

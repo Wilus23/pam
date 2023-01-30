@@ -36,15 +36,17 @@ export default function App() {
             <Text style={styles.title}>Zadanie 1: Layout2</Text>
             <Layout2 />
           </View>
+          <Text style={styles.title}>Zadanie 2:</Text>
           <Calc />
+          <Text style={styles.title}>Zadanie 3 i 4:</Text>
           <Form />
           {/* <Text style={styles.title}>Zadanie 4:</Text> */}
           {/* <Zad4 /> */}
-          <Text style={styles.title}>Zadanie 4 i 5:</Text>
+          <Text style={styles.title}>Zadanie 5:</Text>
           <Zad5 />
           <Text style={styles.title}>Zadanie 6:</Text>
           <Zad6 />
-          <Text style={styles.title}>Zadanie 7:</Text>
+          <Text style={styles.title}>Zadanie 7 i 8:</Text>
           <Zad7 />
         </View>
       </ScrollView>
@@ -67,5 +69,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     textAlign: "center",
+    marginTop: 30,
+    marginBottom: 10,
   },
 });
