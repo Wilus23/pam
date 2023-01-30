@@ -20,6 +20,7 @@ import Form from "./components/z3/Form";
 import Zad4 from "./components/z4/Zad4";
 import Zad5 from "./components/z5/Zad5";
 import Zad6 from "./components/z6/Zad6";
+import Zad7 from "./components/z7/Zad7";
 
 export default function App() {
   return (
@@ -43,6 +44,8 @@ export default function App() {
           <Zad5 />
           <Text style={styles.title}>Zadanie 6:</Text>
           <Zad6 />
+          <Text style={styles.title}>Zadanie 7:</Text>
+          <Zad7 />
         </View>
       </ScrollView>
     </View>
