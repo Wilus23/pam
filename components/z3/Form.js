@@ -9,23 +9,17 @@ import {
   Button,
   TouchableOpacity,
 } from "react-native";
-
+// ! Nawigacja:
 import DatePicker from "react-native-modern-datepicker";
 import { CheckBox, ButtonGroup } from "@rneui/themed";
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import FormDetails from "./FormDetails";
 // import { Button } from "@rneui/base";
 // Checkbox jest zaimportowany z https://reactnativeelements.com/
 
-// TODO: OBEJRZ CO PONIŻEJ
-// ! 159 linijka, zrobić coś z obiektem, tylko nie wiem co. Chyba nie można tego zrobić przez objekt.
-// TODO: Rozwiązać problem dodawania hobby
-// ? Rozwiązać przez checkbox?
-// ? A może zrobić zwyczajne TODO?
-// TODO: Możliwość wybierania płci
-// *
-
-export default function Form() {
+export default function Form({ navigation }) {
+  // Nawigacja:
   // ! Pojedyncze dane
   /* TODO: 
     1. imię
@@ -98,45 +92,12 @@ export default function Form() {
   // Sprawdzanie sportów
   const handleSports1 = () => {
     setCheck1(!check1);
-    // if (check1 === true) {
-    //   setSports({
-    //     ...sports,
-    //     football: "Piłka nożna",
-    //   });
-    // } else {
-    //   setSports({
-    //     ...sports,
-    //     football: "",
-    //   });
-    // }
   };
   const handleSports2 = () => {
     setCheck2(!check2);
-    // if (check2 === true) {
-    //   setSports({
-    //     ...sports,
-    //     volleyball: "Siatkówka",
-    //   });
-    // } else {
-    //   setSports({
-    //     ...sports,
-    //     volleyball: "",
-    //   });
-    // }
   };
   const handleSports3 = () => {
     setCheck3(!check3);
-    // if (check3 === true) {
-    //   setSports({
-    //     ...sports,
-    //     basketball: "Koszykówka",
-    //   });
-    // } else {
-    //   setSports({
-    //     ...sports,
-    //     basketball: "",
-    //   });
-    // }
   };
   // !zad4
   const [text, setText] = useState("789");
@@ -286,20 +247,19 @@ export default function Form() {
       <TouchableOpacity onPress={handleViewingData} style={styles.confirmBtn}>
         <Text style={styles.confirmBtnText}>Wyślij</Text>
       </TouchableOpacity>
-      {/* WYŚWIETLANIE DANYCH */}
-      <Text>Imię: {userData.name}</Text>
-      <Text>Nazwisko: {userData.subname}</Text>
-      <Text>Wiek: {userData.age}</Text>
-      <Text>Miasto: {userData.details.city}</Text>
-      <Text>Warszawa: {userData.details.street}</Text>
-      <Text>Mieszkanie: {userData.details.apartment}</Text>
-      <Text>Data urodzenia: {userData.date}</Text>
-      <Text>Płeć: {userData.gender}</Text>
-      <Text>Sporty: {userData.sports}</Text>
+      <Button
+        title="Zobacz podsumowanie"
+        onPress={() => navigation.navigate("Details", { userData })}
+      />
 
       {/* <Text>Zainteresowania: {check1}</Text> */}
+      {/* <Button 
+    onPress={() => {
+      navigation.navigate('FormDetails');
+    }}
+    /> */}
 
-      <View>
+      <View style={styles.marginTop}>
         <Button title="Zapisz do pliku" onPress={writeFile} />
         <Button title="Odczytaj z pliku" onPress={readFile} />
         <Button title="Wyczyść plik" onPress={cleanFile} />
@@ -341,9 +301,16 @@ const styles = StyleSheet.create({
     maxWidth: "70%",
     alignSelf: "center",
     paddingHorizontal: 30,
+    marginBottom: 20,
   },
   confirmBtnText: {
     color: "white",
     fontWeight: "bold",
+  },
+  marginTop: {
+    marginTop: 40,
+  },
+  marginSmall: {
+    marginTop: 20,
   },
 });

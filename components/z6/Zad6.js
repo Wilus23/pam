@@ -22,16 +22,6 @@ export default function Zad5() {
         title="Załaduj dane"
         onPress={() => {setRefresh(refresh + 1)}} />
 
-      {/* {!data ? (
-        <Text>Loading</Text>
-      ) : (
-        <View>
-          <Text>Nazwa użytkownika: {data.username}</Text>
-          <Text>Imię: {data.firstName}</Text>
-          <Text>Nazwisko: {data.lastName}</Text>
-          <Text>Wiek: {data.age}</Text>
-        </View>
-      )} */}
       
 
 
