@@ -17,10 +17,6 @@ export default function Form(props) {
   }, []);
   return (
     <View>
-      <Button
-        title="Wróc do strony głównej"
-        onPress={() => navigation.push("Home")}
-      />
       <Text>Imię: {userData.name}</Text>
       <Text>Nazwisko: {userData.subname}</Text>
       <Text>Wiek: {userData.age}</Text>
